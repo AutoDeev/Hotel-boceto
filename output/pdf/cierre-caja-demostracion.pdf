@@ -1,0 +1,123 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 3985 >>
+stream
+0.39 0.31 0.69 rg 44 778 29 29 re f
+BT /F2 21 Tf 1 1 1 rg 1 0 0 1 52 784 Tm (A) Tj ET
+BT /F2 14 Tf 0.15 0.18 0.27 rg 1 0 0 1 83 793 Tm (AURIA) Tj ET
+BT /F1 7 Tf 0.40 0.44 0.53 rg 1 0 0 1 83 782 Tm (HOTEL MANAGER / CONTROL DE CAJA) Tj ET
+BT /F2 9 Tf 0.39 0.31 0.69 rg 1 0 0 1 418 792 Tm (REPORTE DE CIERRE) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 762 m 551 762 l S
+BT /F2 27 Tf 0.15 0.18 0.27 rg 1 0 0 1 44 716 Tm (Cierre de caja) Tj ET
+BT /F1 10 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 695 Tm (CAJ-003) Tj ET
+BT /F1 9 Tf 0.40 0.44 0.53 rg 1 0 0 1 314 696 Tm (Fecha de cierre: 06/10/2026, 12:34 a. m.) Tj ET
+BT /F1 11 Tf 0.15 0.18 0.27 rg 1 0 0 1 44 665 Tm (Responsable: Gabriel Molina) Tj ET
+BT /F1 9 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 650 Tm (Apertura: 05/10/2026, 04:34 p. m. | Cierre: 06/10/2026, 12:34 a. m.) Tj ET
+0.96 0.95 0.99 rg 44 563 161 62 re f
+BT /F2 7 Tf 0.40 0.44 0.53 rg 1 0 0 1 56 606 Tm (TOTAL VENDIDO) Tj ET
+BT /F2 17 Tf 0.39 0.31 0.69 rg 1 0 0 1 56 579 Tm (Bs 192,00) Tj ET
+0.96 0.95 0.99 rg 217 563 161 62 re f
+BT /F2 7 Tf 0.40 0.44 0.53 rg 1 0 0 1 229 606 Tm (EFECTIVO ESPERADO) Tj ET
+BT /F2 17 Tf 0.39 0.31 0.69 rg 1 0 0 1 229 579 Tm (Bs 392,00) Tj ET
+0.96 0.95 0.99 rg 390 563 161 62 re f
+BT /F2 7 Tf 0.40 0.44 0.53 rg 1 0 0 1 402 606 Tm (EFECTIVO DECLARADO) Tj ET
+BT /F2 17 Tf 0.39 0.31 0.69 rg 1 0 0 1 402 579 Tm (Bs 387,00) Tj ET
+0.99 0.94 0.94 rg 44 514 507 31 re f
+BT /F2 9 Tf 0.68 0.25 0.30 rg 1 0 0 1 56 527 Tm (CIERRE CON DIFERENCIA) Tj ET
+BT /F2 9 Tf 0.68 0.25 0.30 rg 1 0 0 1 374 527 Tm (Diferencia: Bs -5,00) Tj ET
+BT /F2 10 Tf 0.39 0.31 0.69 rg 1 0 0 1 44 480 Tm (CONCILIACIÓN DE EFECTIVO) Tj ET
+BT /F1 10 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 456 Tm (Monto inicial) Tj ET
+BT /F1 10 Tf 0.15 0.18 0.27 rg 1 0 0 1 421 456 Tm (Bs 200,00) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 447 m 551 447 l S
+BT /F1 10 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 430 Tm (Ventas cobradas en efectivo) Tj ET
+BT /F1 10 Tf 0.15 0.18 0.27 rg 1 0 0 1 421 430 Tm (Bs 192,00) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 421 m 551 421 l S
+BT /F1 10 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 404 Tm (Otros ingresos de efectivo) Tj ET
+BT /F1 10 Tf 0.15 0.18 0.27 rg 1 0 0 1 421 404 Tm (+ Bs 0,00) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 395 m 551 395 l S
+BT /F1 10 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 378 Tm (Egresos de efectivo) Tj ET
+BT /F1 10 Tf 0.15 0.18 0.27 rg 1 0 0 1 421 378 Tm (- Bs 0,00) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 369 m 551 369 l S
+BT /F2 10 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 352 Tm (Efectivo esperado al cierre) Tj ET
+BT /F2 10 Tf 0.15 0.18 0.27 rg 1 0 0 1 421 352 Tm (Bs 392,00) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 343 m 551 343 l S
+BT /F2 10 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 326 Tm (Efectivo contado / declarado) Tj ET
+BT /F2 10 Tf 0.15 0.18 0.27 rg 1 0 0 1 421 326 Tm (Bs 387,00) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 317 m 551 317 l S
+BT /F2 10 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 300 Tm (Diferencia \(declarado - esperado\)) Tj ET
+BT /F2 10 Tf 0.68 0.25 0.30 rg 1 0 0 1 421 300 Tm (Bs -5,00) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 291 m 551 291 l S
+BT /F1 9 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 269 Tm (Cobros por tarjeta: Bs 0,00 | Transferencias: Bs 0,00) Tj ET
+BT /F1 9 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 252 Tm (Estos cobros integran las ventas, pero no el efectivo de caja.) Tj ET
+BT /F2 10 Tf 0.39 0.31 0.69 rg 1 0 0 1 44 218 Tm (VENTAS REALIZADAS \(1\)) Tj ET
+BT /F2 10 Tf 0.15 0.18 0.27 rg 1 0 0 1 44 194 Tm (V-0998) Tj ET
+BT /F2 10 Tf 0.39 0.31 0.69 rg 1 0 0 1 447 194 Tm (Bs 192,00) Tj ET
+BT /F1 8 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 179 Tm (05/10/2026, 09:34 p. m. · Efectivo) Tj ET
+BT /F1 9 Tf 0.15 0.18 0.27 rg 1 0 0 1 44 161 Tm (1 x Servicio de habitación / Bs 180,00 c/u = Bs 180,00) Tj ET
+BT /F1 9 Tf 0.15 0.18 0.27 rg 1 0 0 1 44 144 Tm (1 x Gaseosa personal / Bs 12,00 c/u = Bs 12,00) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 132 m 551 132 l S
+0.88 0.89 0.93 RG 0.6 w 44 55 m 551 55 l S
+BT /F1 8 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 35 Tm (AURIA Hotel Manager · Reporte de demostración) Tj ET
+BT /F1 8 Tf 0.40 0.44 0.53 rg 1 0 0 1 504 35 Tm (Página 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 1506 >>
+stream
+0.39 0.31 0.69 rg 44 778 29 29 re f
+BT /F2 21 Tf 1 1 1 rg 1 0 0 1 52 784 Tm (A) Tj ET
+BT /F2 14 Tf 0.15 0.18 0.27 rg 1 0 0 1 83 793 Tm (AURIA) Tj ET
+BT /F1 7 Tf 0.40 0.44 0.53 rg 1 0 0 1 83 782 Tm (HOTEL MANAGER / CONTROL DE CAJA) Tj ET
+BT /F2 9 Tf 0.39 0.31 0.69 rg 1 0 0 1 418 792 Tm (REPORTE DE CIERRE) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 762 m 551 762 l S
+BT /F2 12 Tf 0.15 0.18 0.27 rg 1 0 0 1 44 731 Tm (Cierre de caja / continuación) Tj ET
+BT /F1 8 Tf 0.40 0.44 0.53 rg 1 0 0 1 375 735 Tm (CAJ-003) Tj ET
+BT /F2 10 Tf 0.39 0.31 0.69 rg 1 0 0 1 44 683 Tm (OTROS MOVIMIENTOS) Tj ET
+BT /F1 10 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 659 Tm (Sin movimientos adicionales.) Tj ET
+BT /F2 10 Tf 0.39 0.31 0.69 rg 1 0 0 1 44 626 Tm (RESUMEN FINAL) Tj ET
+BT /F1 10 Tf 0.15 0.18 0.27 rg 1 0 0 1 44 602 Tm (El turno finalizó con Bs 192,00 en ventas y Bs 387,00 de efectivo declarado. Se registró) Tj ET
+BT /F1 10 Tf 0.15 0.18 0.27 rg 1 0 0 1 44 585 Tm (un faltante de Bs 5,00.) Tj ET
+BT /F2 10 Tf 0.39 0.31 0.69 rg 1 0 0 1 44 552 Tm (OBSERVACIONES DEL CIERRE) Tj ET
+BT /F1 10 Tf 0.15 0.18 0.27 rg 1 0 0 1 44 528 Tm (Faltante de Bs 5 registrado al contar el efectivo.) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 496 m 551 496 l S
+BT /F1 9 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 475 Tm (Cierre registrado por: Gabriel Molina) Tj ET
+0.88 0.89 0.93 RG 0.6 w 44 55 m 551 55 l S
+BT /F1 8 Tf 0.40 0.44 0.53 rg 1 0 0 1 44 35 Tm (AURIA Hotel Manager · Reporte de demostración) Tj ET
+BT /F1 8 Tf 0.40 0.44 0.53 rg 1 0 0 1 504 35 Tm (Página 2) Tj ET
+endstream
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000000462 00000 n 
+0000004498 00000 n 
+0000004634 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+6191
+%%EOF

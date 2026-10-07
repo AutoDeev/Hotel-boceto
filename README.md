@@ -1,26 +1,20 @@
 # AURIA Hotel Boutique
 
-Demo web de hotel construida con HTML, CSS y JavaScript vanilla. Abre `index.html` en un navegador para recorrer la landing y realizar reservas de prueba. Las imágenes y fuentes se cargan desde servicios externos; el resto de la demo no necesita conexión ni servidor.
+Sitio web en HTML, CSS y JavaScript vanilla. Abre `index.html` o ejecuta `python3 -m http.server 8765` y visita `http://localhost:8765/`.
 
-## Acceso al panel
+## Sitio público
 
-Desde **Acceso personal** en la landing o abriendo `login.html`:
+Diseño en marfil, terracota, azul suave y ciruela. Incluye filtros de habitaciones, favoritos persistentes, fichas de habitación, experiencias con pestañas, galería filtrable con navegación por teclado, testimonios, preguntas desplegables y formulario de contacto conectado a la bandeja de mensajes del panel.
+
+El sitio no incluye un sistema de reservas.
+
+## Acceso personal
 
 | Rol | Usuario | Contraseña |
 | --- | --- | --- |
 | Administrador | `admin` | `admin123` |
 | Empleado | `empleado` | `empleado123` |
 
-El administrador gestiona reservas, habitaciones, empleados y configuración. El empleado consulta el panel, reservas, habitaciones y clientes, y puede actualizar reservas. Las secciones exclusivas del administrador muestran **Acceso restringido**.
+El administrador gestiona habitaciones, empleados, mensajes y configuración. El empleado consulta habitaciones y clientes, y puede leer y clasificar mensajes. Empleados y configuración están restringidos al administrador.
 
-La autenticación es simulada. La sesión se conserva en `sessionStorage` y los datos de demostración en `localStorage` de ese navegador. No hay pagos, envío real de correos ni backend.
-
-## Archivos
-
-- `index.html`: sitio público y reservas.
-- `login.html`: acceso de demostración.
-- `dashboard.html`: panel de gestión.
-- `css/`: estilos compartidos, de la landing y del panel.
-- `js/`: datos, autenticación e interacciones.
-
-Para mostrar la demo con una URL local también puedes ejecutar `python3 -m http.server 8765` en este directorio y abrir `http://localhost:8765/`.
+Los datos se guardan en `localStorage` y la sesión en `sessionStorage`. La autenticación es simulada y los mensajes se guardan únicamente en este navegador. Las imágenes y fuentes necesitan conexión a Internet. No hay backend ni envío real de correos.

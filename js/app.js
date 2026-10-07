@@ -3,7 +3,7 @@ const Hotel = (() => {
   const today = new Date();
   const offset = n => { const d = new Date(today); d.setDate(d.getDate() + n); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
   const initial = {
-    settings: { name: 'AURIA', email: 'reservas@auriahotel.com', phone: '+591 2 244 8200', address: 'Calle Jaén 722, La Paz, Bolivia', currency: 'BOB', checkin: '15:00', checkout: '11:00' },
+    settings: { name: 'AURIA', email: 'hola@auriahotel.com', phone: '+591 2 244 8200', address: 'Calle Jaén 722, La Paz, Bolivia', currency: 'BOB', checkin: '15:00', checkout: '11:00' },
     roomTypes: [
       { id:'presidencial', name:'Suite Presidencial', price:1850, capacity:4, bed:'King + sofá', size:92, image:'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1200&q=85', description:'Un refugio excepcional con sala privada, vistas a la ciudad y detalles hechos para una estancia memorable.' },
       { id:'deluxe', name:'Suite Deluxe', price:1180, capacity:3, bed:'King', size:58, image:'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85', description:'Amplitud serena, textiles nobles y una atmósfera cálida para descansar a tu ritmo.' },
@@ -37,31 +37,41 @@ const Hotel = (() => {
     employees: [
       {id:'e1',name:'Elena Salazar',position:'Gerente general',email:'elena@auriahotel.com',status:'Activo',lastAccess:offset(0)},
       {id:'e2',name:'Nicolás Vega',position:'Recepción',email:'nicolas@auriahotel.com',status:'Activo',lastAccess:offset(0)},
-      {id:'e3',name:'Ana Beltrán',position:'Reservas',email:'ana@auriahotel.com',status:'Activo',lastAccess:offset(-1)},
+      {id:'e3',name:'Ana Beltrán',position:'Atención al huésped',email:'ana@auriahotel.com',status:'Activo',lastAccess:offset(-1)},
       {id:'e4',name:'Gabriel Molina',position:'Conserjería',email:'gabriel@auriahotel.com',status:'Activo',lastAccess:offset(-2)},
       {id:'e5',name:'Paula Ríos',position:'Housekeeping',email:'paula@auriahotel.com',status:'Inactivo',lastAccess:offset(-12)}
     ],
-    reservations: [
-      {id:'AUR-2401',clientId:'c1',roomId:'r2',checkin:offset(-2),checkout:offset(2),guests:2,total:2080,status:'Confirmada',created:offset(-20)},
-      {id:'AUR-2402',clientId:'c2',roomId:'r5',checkin:offset(-1),checkout:offset(3),guests:2,total:4720,status:'Confirmada',created:offset(-12)},
-      {id:'AUR-2403',clientId:'c3',roomId:'r3',checkin:offset(1),checkout:offset(4),guests:2,total:2370,status:'Pendiente',created:offset(-3)},
-      {id:'AUR-2404',clientId:'c4',roomId:'r8',checkin:offset(4),checkout:offset(7),guests:3,total:5550,status:'Confirmada',created:offset(-6)},
-      {id:'AUR-2405',clientId:'c5',roomId:'r6',checkin:offset(2),checkout:offset(5),guests:2,total:3540,status:'Pendiente',created:offset(-1)},
-      {id:'AUR-2406',clientId:'c6',roomId:'r1',checkin:offset(-15),checkout:offset(-12),guests:1,total:1560,status:'Completada',created:offset(-25)},
-      {id:'AUR-2407',clientId:'c7',roomId:'r9',checkin:offset(-9),checkout:offset(-6),guests:2,total:2370,status:'Completada',created:offset(-15)},
-      {id:'AUR-2408',clientId:'c8',roomId:'r10',checkin:offset(6),checkout:offset(9),guests:2,total:1560,status:'Cancelada',created:offset(-5)},
-      {id:'AUR-2409',clientId:'c9',roomId:'r8',checkin:offset(12),checkout:offset(16),guests:2,total:7400,status:'Confirmada',created:offset(-2)},
-      {id:'AUR-2410',clientId:'c10',roomId:'r1',checkin:offset(0),checkout:offset(2),guests:2,total:1040,status:'Pendiente',created:offset(-1)}
+    inquiries: [
+      {id:'msg1',name:'Mariana Torres',email:'mariana.torres@email.com',subject:'Restaurante y experiencias',message:'Hola, quisiera saber si tienen opciones vegetarianas para el almuerzo. Muchas gracias.',date:offset(0),status:'Nuevo'},
+      {id:'msg2',name:'Santiago Rojas',email:'s.rojas@email.com',subject:'Información general',message:'Me gustaría conocer los detalles del servicio de traslado desde el aeropuerto.',date:offset(-1),status:'Nuevo'},
+      {id:'msg3',name:'Camila Vargas',email:'camila.vargas@email.com',subject:'Eventos y celebraciones',message:'Estamos buscando un espacio para una pequeña celebración familiar. ¿Podrían compartir información?',date:offset(-2),status:'Leído'}
     ]
   };
   let data;
   try { data = JSON.parse(localStorage.getItem(key)); } catch { data = null; }
-  if (!data || !data.roomTypes || !data.reservations) { data = structuredClone(initial); localStorage.setItem(key, JSON.stringify(data)); }
+  if (!data || !data.roomTypes || !data.clients) { data = structuredClone(initial); localStorage.setItem(key, JSON.stringify(data)); }
+  if (!data.inquiries) data.inquiries = structuredClone(initial.inquiries);
+  if (data.settings.email === 'reservas@auriahotel.com') data.settings.email = 'hola@auriahotel.com';
+  data.clients.forEach((client,index) => { if(client.visits === undefined) client.visits = 1 + index % 5; if(!client.lastVisit) client.lastVisit = offset(-2-index*3); });
+  data.employees.forEach(employee => { if(employee.position === 'Reservas') employee.position = 'Atención al huésped'; });
+  localStorage.setItem(key, JSON.stringify(data));
   const save = () => localStorage.setItem(key, JSON.stringify(data));
+  const refresh = () => {
+    const latest=JSON.parse(localStorage.getItem(key) || 'null');
+    if(latest) { Object.keys(data).forEach(k=>delete data[k]); Object.assign(data,latest); }
+    return data;
+  };
+  const transaction = action => {
+    const next=JSON.parse(localStorage.getItem(key) || JSON.stringify(data));
+    const result=action(next);
+    next.updatedAt=new Date().toISOString();
+    localStorage.setItem(key,JSON.stringify(next));
+    Object.keys(data).forEach(k=>delete data[k]);Object.assign(data,next);
+    return result;
+  };
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const money = amount => new Intl.NumberFormat('es-BO',{style:'currency',currency:data.settings.currency || 'BOB',maximumFractionDigits:0}).format(amount || 0);
+  const money = amount => new Intl.NumberFormat('es-BO',{style:'currency',currency:data.settings.currency || 'BOB',minimumFractionDigits:2,maximumFractionDigits:2}).format(amount || 0);
   const date = value => value ? new Date(`${value}T12:00:00`).toLocaleDateString('es-BO',{day:'2-digit',month:'short',year:'numeric'}) : '—';
-  const nights = (a,b) => Math.round((new Date(`${b}T12:00:00`) - new Date(`${a}T12:00:00`))/86400000);
   const type = id => data.roomTypes.find(item => item.id === id);
   const room = id => data.rooms.find(item => item.id === id);
   const client = id => data.clients.find(item => item.id === id);
@@ -74,9 +84,35 @@ const Hotel = (() => {
     const footerAddress = document.querySelector('.footer-top a[href="#contacto"]'); if (footerAddress) footerAddress.textContent = data.settings.address;
   };
   const toast = (message, kind='success') => { const host = document.getElementById('toasts') || (() => {const el=document.createElement('div'); el.id='toasts'; el.className='toast-host'; document.body.append(el); return el;})(); const item=document.createElement('div'); item.className=`toast ${kind}`; item.setAttribute('role','status'); item.textContent=message; host.append(item); setTimeout(()=>item.remove(),4200); };
-  const showModal = html => { const host=document.getElementById('modal-root'); host.innerHTML=`<div class="modal-backdrop" data-close-modal><div class="modal-panel" role="dialog" aria-modal="true">${html}</div></div>`; host.querySelector('.modal-backdrop').addEventListener('click', e=>{if(e.target.hasAttribute('data-close-modal')) closeModal();}); host.querySelectorAll('[data-close-modal]').forEach(el=>{if(!el.classList.contains('modal-backdrop'))el.addEventListener('click',closeModal)}); document.body.classList.add('modal-open'); };
-  const closeModal = () => { document.getElementById('modal-root').innerHTML=''; document.body.classList.remove('modal-open'); };
-  document.addEventListener('keydown',e=>{if(e.key==='Escape' && document.getElementById('modal-root')?.innerHTML) closeModal();});
+  let previousFocus = null;
+  const closeModal = () => {
+    document.getElementById('modal-root').innerHTML = '';
+    document.body.classList.remove('modal-open');
+    if (previousFocus?.isConnected) previousFocus.focus({preventScroll:true});
+    previousFocus = null;
+  };
+  const showModal = html => {
+    const host = document.getElementById('modal-root');
+    if (!host.innerHTML) previousFocus = document.activeElement;
+    host.innerHTML = `<div class="modal-backdrop" data-close-modal><div class="modal-panel" role="dialog" aria-modal="true" tabindex="-1">${html}</div></div>`;
+    const panel = host.querySelector('.modal-panel');
+    panel.setAttribute('aria-label', panel.querySelector('h2')?.textContent || 'Detalles del hotel');
+    host.querySelector('.modal-backdrop').addEventListener('click',e=>{if(e.target.hasAttribute('data-close-modal'))closeModal();});
+    host.querySelectorAll('button[data-close-modal]').forEach(button=>button.addEventListener('click',closeModal));
+    document.body.classList.add('modal-open');
+    (panel.querySelector('.modal-close') || panel).focus({preventScroll:true});
+  };
+  document.addEventListener('keydown', e => {
+    const panel=document.querySelector('.modal-panel');if(!panel)return;
+    if(e.key==='Escape'){closeModal();return;}
+    if(e.key==='Tab'){
+      const focusable=[...panel.querySelectorAll('a[href],button,input,select,textarea,[tabindex="0"]')].filter(el=>!el.disabled);
+      const first=focusable[0],last=focusable[focusable.length-1];
+      if(!first){e.preventDefault();panel.focus();}
+      else if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
   applySettings();
-  return {data, initial, save, esc, money, date, nights, type, room, client, uid, toast, showModal, closeModal, offset, applySettings};
+  return {data, initial, save, refresh, transaction, key, esc, money, date, type, room, client, uid, toast, showModal, closeModal, offset, applySettings};
 })();
